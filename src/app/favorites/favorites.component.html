@@ -1,0 +1,7 @@
+
+<a [routerLink]="['/']" routerLinkActive="router-link-active" >Return home!</a>
+<div *ngFor="let movie of movieservice.favorites">
+    {{movie.title}},
+   <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"> 
+   {{movie.overview}};
+</div>

@@ -1,0 +1,8 @@
+
+<a [routerLink]="['/favorites']" routerLinkActive="router-link-active" >Click for Favorites!</a>
+<div *ngFor="let movie of movieservice.movies">
+    {{movie.title}},
+   <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"> 
+   {{movie.overview}};
+   <button (click)=addFavorites(movie)> Add to watchlist</button>
+</div>
